@@ -3,5 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-nova": {
+      "projectType": "library",
+      "root": "projects/ng-nova",
+      "sourceRoot": "projects/ng-nova/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-nova/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-nova/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-nova/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-nova/src/test.ts",
+            "tsConfig": "projects/ng-nova/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-nova/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "06557737-193d-4847-92e6-29a51c0bbc41"
   }
 }
