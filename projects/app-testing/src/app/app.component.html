@@ -1,8 +1,48 @@
 <section>
     <h2>Message box</h2>
-    <div>
+    <div style="display: flex; column-gap: 1em; row-gap: 1em;">
         <button (click)="onMessageBox()">
-            Mensaje alerta
+            Mensaje
+        </button>
+        <button (click)="onMessageBox()">
+            Mensaje Confirm
+        </button>
+        <button (click)="onMessageBox(true, true)">
+            Mensaje Confirm disable close
+        </button>
+    </div>
+    <div style="display: flex; column-gap: 1em; row-gap: 1em;">
+        <button (click)="onMessageBoxAlert()">
+            Mensaje
+        </button>
+        <button (click)="onMessageBoxAlert(true)">
+            Mensaje Confirm
+        </button>
+        <button (click)="onMessageBoxAlert(true, true)">
+            Mensaje Confirm disable close
+        </button>
+    </div>
+    <br>
+    <div style="display: flex; column-gap: 1em; row-gap: 1em;">
+        <button (click)="onMessageBoxInfo()">
+            Mensaje
+        </button>
+        <button (click)="onMessageBoxInfo(true)">
+            Mensaje Confirm
+        </button>
+        <button (click)="onMessageBoxInfo(true, true)">
+            Mensaje Confirm disable close
+        </button>
+    </div>
+    <div style="display: flex; column-gap: 1em; row-gap: 1em;">
+        <button (click)="onMessageBoxError()">
+            Mensaje
+        </button>
+        <button (click)="onMessageBoxError(true)">
+            Mensaje Confirm
+        </button>
+        <button (click)="onMessageBoxError(true, true)">
+            Mensaje Confirm disable close
         </button>
     </div>
 </section>

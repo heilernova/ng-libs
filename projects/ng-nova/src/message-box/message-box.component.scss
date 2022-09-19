@@ -3,22 +3,45 @@
     top: 0;
     right: 2px;
 }
+mat-dialog-content{
+    margin-top: .5em;
+}
 ::ng-deep{
-    .nv-panel-dialog{
+    .nv-dialog-panel{
         .mat-dialog-container{
             padding-top: 5px;
             position: relative;
             min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1em;
+            margin: 0;
+            padding: 0;
 
             .mat-dialog-title{
-                display: flex;
+                max-width: none;
+                display: grid;
+                grid-template-columns: auto 1fr auto;
                 align-items: center;
                 column-gap: 5px;
                 margin: 0;
-                padding-right: 25px;
+                padding-left: .5em;
+                padding-right: .3em;
+            }
+            .mat-dialog-content{
+                display: block;
+                margin: 0;
+                padding: 1em 1.5em;
+                min-width: none;
+                white-space: pre;
+            }
+            .mat-dialog-actions{
+                margin: 0;
+                padding: 0 1em;
             }
 
             .mat-button{
+                margin: 0;
                 .mat-button-wrapper{
                     display: flex;
                     align-items: center ;
@@ -28,5 +51,26 @@
                 }
             }
         }
+
+    }
+
+    .nv-dialog-disable-close{
+        .mat-dialog-container{
+            animation: nv-message-box-disable-close-lock-show;
+            animation-duration: .5s;
+        }
+    }
+
+}
+
+@keyframes nv-message-box-disable-close-lock-show{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
     }
 }

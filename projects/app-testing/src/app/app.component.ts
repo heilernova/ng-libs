@@ -13,7 +13,20 @@ export class AppComponent {
     // loadInputsEvents();
   }
 
-  onMessageBox(){
-    this.msgbox.show();
+  onMessageBox(confirm:boolean = false, disableClose?:boolean){
+    this.msgbox.show("Hola");
   }
+
+  onMessageBoxAlert(confirm:boolean = false, disableClose?:boolean){
+    this.msgbox.alert("Hola");
+  }
+  onMessageBoxInfo(confirm:boolean = false, disableClose?:boolean){
+    this.msgbox.info("Hola");
+  }
+  onMessageBoxError(confirm:boolean = false, disableClose?:boolean){
+    this.msgbox.error("Hola");
+  }
+  // onMessageBoxAlert(confirm:boolean = false, disableClose?:boolean){
+  //   this.msgbox.show("Hola");
+  // }
 }

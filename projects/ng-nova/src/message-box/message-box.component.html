@@ -1,22 +1,21 @@
-<div mat-dialog-title>{{title}}</div>
+<div mat-dialog-title>
+    <i class="material-icons">{{icon}}</i>
+    <div>{{title}}</div>
+    <button tabindex="-1" mat-icon-button mat-dialog-close>
+        <i class="material-icons">close</i>
+    </button>    
+</div>
 <mat-dialog-content>
-    {{title}}
+    {{message}}
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button mat-button>
+    <button mat-button [mat-dialog-close]="true">
         <i class="material-icons">done</i>
         <div>Si</div>
     </button>
-    <button mat-button>
+    <button mat-button [mat-dialog-close]="false" *ngIf="isConfirm">
         <i class="material-icons">close</i>
         <div>No</div>
     </button>
-    <!-- <button mat-button>
-        <i class="material-icons">block</i>
-        <div>Cancelar</div>
-    </button> -->
 </mat-dialog-actions>
 
-<button tabindex="-1" mat-icon-button class="button-close">
-    <i class="material-icons">close</i>
-</button>
