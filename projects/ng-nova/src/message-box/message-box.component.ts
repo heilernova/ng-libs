@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'message-box',
@@ -15,8 +15,11 @@ export class MessageBox implements OnInit {
   }
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) private data:MessageBoxData 
-  ) { console.log(this.isConfirm) }
+    @Inject(MAT_DIALOG_DATA) private data:MessageBoxData,
+    private _matDialogRef:MatDialogRef<MessageBox>
+  ) {
+    this._matDialogRef.addPanelClass(`nv-dialog-panel-${this.iconos[this.data.type.toString()]}` )
+  }
 
   get title():string {
     return this.data.title;

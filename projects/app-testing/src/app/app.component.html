@@ -1,48 +1,53 @@
-<section>
+<section style="display: flex; row-gap: 1em; flex-direction: column;">
     <h2>Message box</h2>
     <div style="display: flex; column-gap: 1em; row-gap: 1em;">
-        <button (click)="onMessageBox()">
+        <button mat-stroked-button (click)="onMessageBox()">
             Mensaje
         </button>
-        <button (click)="onMessageBox()">
+        <button mat-stroked-button (click)="onMessageBox()">
             Mensaje Confirm
         </button>
-        <button (click)="onMessageBox(true, true)">
+        <button mat-stroked-button (click)="onMessageBox(true, true)">
             Mensaje Confirm disable close
         </button>
     </div>
     <div style="display: flex; column-gap: 1em; row-gap: 1em;">
-        <button (click)="onMessageBoxAlert()">
-            Mensaje
+        <button mat-stroked-button (click)="onMessageBoxAlert()">
+            Alert
         </button>
-        <button (click)="onMessageBoxAlert(true)">
-            Mensaje Confirm
+        <button mat-stroked-button (click)="onMessageBoxAlert(true)">
+            Alert Confirm
         </button>
-        <button (click)="onMessageBoxAlert(true, true)">
-            Mensaje Confirm disable close
-        </button>
-    </div>
-    <br>
-    <div style="display: flex; column-gap: 1em; row-gap: 1em;">
-        <button (click)="onMessageBoxInfo()">
-            Mensaje
-        </button>
-        <button (click)="onMessageBoxInfo(true)">
-            Mensaje Confirm
-        </button>
-        <button (click)="onMessageBoxInfo(true, true)">
-            Mensaje Confirm disable close
+        <button mat-stroked-button (click)="onMessageBoxAlert(true, true)">
+            Alert Confirm disable close
         </button>
     </div>
     <div style="display: flex; column-gap: 1em; row-gap: 1em;">
-        <button (click)="onMessageBoxError()">
-            Mensaje
+        <button mat-stroked-button (click)="onMessageBoxInfo()">
+            Info
         </button>
-        <button (click)="onMessageBoxError(true)">
-            Mensaje Confirm
+        <button mat-stroked-button (click)="onMessageBoxInfo(true)">
+            Info Confirm
         </button>
-        <button (click)="onMessageBoxError(true, true)">
-            Mensaje Confirm disable close
+        <button mat-stroked-button (click)="onMessageBoxInfo(true, true)">
+            Info Confirm disable close
         </button>
     </div>
+    <div style="display: flex; column-gap: 1em; row-gap: 1em;">
+        <button mat-stroked-button (click)="onMessageBoxError()">
+            Error
+        </button>
+        <button mat-stroked-button (click)="onMessageBoxError(true)">
+            Error Confirm
+        </button>
+        <button mat-stroked-button (click)="onMessageBoxError(true, true)">
+            Error Confirm disable close
+        </button>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section>
+    <app-inputs></app-inputs>
 </section>

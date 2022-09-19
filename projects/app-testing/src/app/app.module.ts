@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MessageBoxModule } from 'ng-nova';
 import { MessageBoxModule } from 'projects/ng-nova/src/public-api';
+import { MatButtonModule } from '@angular/material/button';
+import { InputsComponent } from './inputs/inputs.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MessageBoxModule } from 'projects/ng-nova/src/public-api';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MessageBoxModule
+    MessageBoxModule,
+    MatButtonModule,
+    InputsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

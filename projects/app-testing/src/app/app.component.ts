@@ -14,17 +14,17 @@ export class AppComponent {
   }
 
   onMessageBox(confirm:boolean = false, disableClose?:boolean){
-    this.msgbox.show("Hola");
+    this.msgbox.show("Hola", { disableClose, confirm });
   }
 
   onMessageBoxAlert(confirm:boolean = false, disableClose?:boolean){
-    this.msgbox.alert("Hola");
+    this.msgbox.alert("Hola", { disableClose, confirm });
   }
   onMessageBoxInfo(confirm:boolean = false, disableClose?:boolean){
-    this.msgbox.info("Hola");
+    this.msgbox.info("Hola", { disableClose, confirm });
   }
   onMessageBoxError(confirm:boolean = false, disableClose?:boolean){
-    this.msgbox.error("Hola");
+    this.msgbox.error("Hola", { disableClose, confirm });
   }
   // onMessageBoxAlert(confirm:boolean = false, disableClose?:boolean){
   //   this.msgbox.show("Hola");

@@ -27,6 +27,9 @@ mat-dialog-content{
                 margin: 0;
                 padding-left: .5em;
                 padding-right: .3em;
+                button i{
+                    font-weight: 600;
+                }
             }
             .mat-dialog-content{
                 display: block;
@@ -59,6 +62,19 @@ mat-dialog-content{
             animation: nv-message-box-disable-close-lock-show;
             animation-duration: .5s;
         }
+    }
+
+    // .nv-dialog-panel-alert .mat-dialog-title .icon{
+    //     color: rgb(173, 184, 19);
+    // }
+    .nv-dialog-panel-warning .mat-dialog-title .icon{
+        color: rgb(199, 199, 23);
+    }
+    .nv-dialog-panel-info .mat-dialog-title .icon{
+        color: rgb(7, 103, 158);
+    }
+    .nv-dialog-panel-error .mat-dialog-title .icon{
+        color: rgb(150, 1, 1);
     }
 
 }
