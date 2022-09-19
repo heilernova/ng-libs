@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputNumber } from './input-number/input-number.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputCurrency } from './input-currency/input-currency.component';
+import { InputCellphone } from './input-cellphone/input-cellphone.component';
 
 
 
 @NgModule({
   declarations: [
-    InputNumber
+    InputNumber,
+    InputCurrency,
+    InputCellphone
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    InputNumber
+    InputNumber,
+    InputCurrency,
+    InputCellphone
   ]
 })
 export class InputsModule { }

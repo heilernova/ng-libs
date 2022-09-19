@@ -15,7 +15,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 export class InputsComponent implements OnInit {
 
   form = new FormGroup({
-    number: new FormControl(null)
+    number: new FormControl(null),
+    decimal: new FormControl(null)
   })
   constructor() { }
 

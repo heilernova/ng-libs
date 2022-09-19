@@ -47,7 +47,7 @@ export class InputNumber implements OnInit, ControlValueAccessor, MatFormFieldCo
     if (value?.match(/[a-z]/gi)){
       value = null;
     }
-    console.log(value);
+    // console.log(value);
     if ( value ){
       this._inputValue = value.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ".");
 

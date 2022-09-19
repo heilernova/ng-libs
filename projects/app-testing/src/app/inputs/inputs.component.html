@@ -1,13 +1,22 @@
 <div [formGroup]="form">
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="fill" style="width: 180px;">
         <mat-label>Numero</mat-label>
         <input-number formControlName="number"></input-number>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="standard">
+        <mat-label>Moneda</mat-label>
+        <input-currency formControlName="decimal" ></input-currency>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="standard">
+        <mat-label>Numero</mat-label>
+        <input-cellphone></input-cellphone>
     </mat-form-field>
     <mat-form-field appearance="standard">
         <mat-label>Numero</mat-label>
         <input type="text" matInput>
     </mat-form-field>
-    
 </div>
 
 <button (click)="send()">

@@ -1,0 +1,9 @@
+<div class="nv-input-currency-container">
+    <input #number type="text" placeholder="0" class="number"
+    [(ngModel)]="valueInt"
+    [disabled]="disabled">
+    <div>,</div>
+    <input #decimals placeholder="00" maxlength="2" class="decimals"
+    [(ngModel)]="valueDecimal"
+    [disabled]="disabled">
+</div>
