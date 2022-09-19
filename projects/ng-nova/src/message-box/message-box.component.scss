@@ -1,0 +1,32 @@
+.button-close{
+    position: absolute;
+    top: 0;
+    right: 2px;
+}
+::ng-deep{
+    .nv-panel-dialog{
+        .mat-dialog-container{
+            padding-top: 5px;
+            position: relative;
+            min-width: 300px;
+
+            .mat-dialog-title{
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+                margin: 0;
+                padding-right: 25px;
+            }
+
+            .mat-button{
+                .mat-button-wrapper{
+                    display: flex;
+                    align-items: center ;
+                    .material-icons{
+                        font-size: 130%;
+                    }
+                }
+            }
+        }
+    }
+}
