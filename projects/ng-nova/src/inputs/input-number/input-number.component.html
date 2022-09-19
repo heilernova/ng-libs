@@ -1,1 +1,10 @@
-<p>input-number works!</p>
+<input
+#input
+class="nv-input-number"
+[ngClass]="textAling"
+[(ngModel)]="inputValue"
+[attr.aria-labelledby]="getLabelId()"
+(focusin)="onFocusIn($event)"
+(focusout)="onFocusOut($event)"
+(keypress)="keyPress($event)"
+(keyup)="keyUp($event)">

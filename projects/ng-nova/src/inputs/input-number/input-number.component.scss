@@ -1,0 +1,20 @@
+:host{
+    display: grid;
+}
+input{
+    border: 0;
+    outline: 0;
+    margin: 0;
+    min-width: 10px;
+    width: inherit;
+}
+
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+.rigth{
+    text-align: right;
+}

@@ -1,1 +1,15 @@
-<p>inputs works!</p>
+<div [formGroup]="form">
+    <mat-form-field appearance="standard">
+        <mat-label>Numero</mat-label>
+        <input-number formControlName="number"></input-number>
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Numero</mat-label>
+        <input type="text" matInput>
+    </mat-form-field>
+    
+</div>
+
+<button (click)="send()">
+    ver
+</button>
