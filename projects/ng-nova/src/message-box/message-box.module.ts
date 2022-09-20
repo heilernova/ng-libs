@@ -19,7 +19,6 @@ export class MessageBoxModule {
   constructor(
     matDialog:MatDialog
   ){
-    
     matDialog.afterOpened.subscribe(val => {
       console.log(val.id);
 
@@ -45,12 +44,11 @@ export class MessageBoxModule {
       
     })
 
-    // let d = matDialog.afterOpened.complete()
-
     document.body.addEventListener("DOMNodeInserted", (e) => {
       let element = e.target;
       if (element instanceof HTMLElement){
         if (element.classList.contains('nv-dialog-backdrop')){
+          console.log("Evento ");
           element.addEventListener("contextmenu", (e) => {
             e.stopPropagation();
             e.preventDefault();
