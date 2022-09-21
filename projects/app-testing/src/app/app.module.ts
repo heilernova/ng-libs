@@ -8,10 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageBoxModule } from 'projects/ng-nova/src/public-api';
 import { MatButtonModule } from '@angular/material/button';
 import { InputsComponent } from './inputs/inputs.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatContextMenuTrigger } from './contenxt-menu';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MatContextMenuTrigger
   ],
   imports: [
     BrowserModule,
@@ -19,9 +22,12 @@ import { InputsComponent } from './inputs/inputs.component';
     BrowserAnimationsModule,
     MessageBoxModule,
     MatButtonModule,
-    InputsComponent
+    InputsComponent,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [
+    // MatContextMenuTrigger
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

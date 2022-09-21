@@ -47,7 +47,7 @@ export class MessageBoxModule {
     document.body.addEventListener("DOMNodeInserted", (e) => {
       let element = e.target;
       if (element instanceof HTMLElement){
-        if (element.classList.contains('nv-dialog-backdrop')){
+        if (element.classList.contains('cdk-overlay-backdrop')){
           console.log("Evento ");
           element.addEventListener("contextmenu", (e) => {
             e.stopPropagation();

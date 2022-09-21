@@ -51,3 +51,18 @@
 <section>
     <app-inputs></app-inputs>
 </section>
+
+<br><br>
+<div [mat-menu-trigger-for]="menu">
+    Hola como estas
+</div>
+<span style="position:fixed;" #spanTrigger class="context-menu-trigger" #matTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"></span>
+<div  (contextmenu)="openContextMenu($event, matTrigger, spanTrigger)">
+    Hola perrito que haceemos hoy
+    <br>
+    Menu context
+</div>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Hola</button>
+</mat-menu>

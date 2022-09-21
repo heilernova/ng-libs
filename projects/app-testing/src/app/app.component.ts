@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 // import { MessageBoxService } from 'ng-nova';
 import { MessageBoxService } from 'projects/ng-nova/src/public-api';
 @Component({
@@ -28,5 +29,22 @@ export class AppComponent {
   }
   // onMessageBoxAlert(confirm:boolean = false, disableClose?:boolean){
   //   this.msgbox.show("Hola");
-  // }
+  // }}
+
+
+  openContextMenu(
+    event: MouseEvent,
+    trigger: MatMenuTrigger,
+    triggerElement: HTMLElement
+  ) {
+    triggerElement.style.left = event.clientX + 5 + "px";
+    triggerElement.style.top = event.clientY + 5 + "px";
+    if (trigger.menuOpen) {
+      trigger.closeMenu();
+      trigger.openMenu();
+    } else {
+      trigger.openMenu();
+    }
+    event.preventDefault();
+  }
 }
