@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InputNumber, InputsModule, MessageBoxModule } from 'projects/ng-nova/src/public-api';
 import { MatInputModule } from '@angular/material/input';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CompatibleInputEvent, IS_INPUT_SUPPORTED, normalizeInputEvent } from './test-event/events';
 
 @Component({
   selector: 'app-inputs',
@@ -18,7 +19,11 @@ export class InputsComponent implements OnInit {
     number: new FormControl(null),
     decimal: new FormControl(null)
   })
-  constructor() { }
+  constructor() { 
+
+    
+
+  }
 
   ngOnInit(): void {
   }
@@ -26,5 +31,4 @@ export class InputsComponent implements OnInit {
   send(): void {
     console.log(this.form.getRawValue());
   }
-
 }

@@ -5,6 +5,8 @@
 // export * from './inputs/input-envents';
 // export * from './inputs/input-number';
 
+export * from './dom-inserted-events.module';
+
 export * from './message-box/message-box.module';
 export * from './message-box/message-box.service';
 export * from './message-box/message-box.component';

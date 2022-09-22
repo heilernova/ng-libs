@@ -20,7 +20,6 @@ export class MessageBoxModule {
     matDialog:MatDialog
   ){
     matDialog.afterOpened.subscribe(val => {
-      console.log(val.id);
 
       if (val.disableClose){
 
@@ -36,27 +35,24 @@ export class MessageBoxModule {
   
             controls.set(val.id, setTime);
           }
-          
-
-          
         })
       }
       
     })
 
-    document.body.addEventListener("DOMNodeInserted", (e) => {
-      let element = e.target;
-      if (element instanceof HTMLElement){
-        if (element.classList.contains('cdk-overlay-backdrop')){
-          console.log("Evento ");
-          element.addEventListener("contextmenu", (e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            (e.target as HTMLDivElement).click();
-          });
-        }
-      }
-    });
+// document.body.addEventListener("DOMNodeInserted", (e) => {
+//       let element = e.target;
+//       if (element instanceof HTMLElement){
+//         if (element.classList.contains('cdk-overlay-backdrop')){
+//           console.log("Evento ");
+//           element.addEventListener("contextmenu", (e) => {
+//             e.stopPropagation();
+//             e.preventDefault();
+//             (e.target as HTMLDivElement).click();
+//           });
+//         }
+//       }
+//     });   
   }
 }
 

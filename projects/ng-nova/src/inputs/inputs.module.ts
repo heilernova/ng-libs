@@ -4,6 +4,7 @@ import { InputNumber } from './input-number/input-number.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputCurrency } from './input-currency/input-currency.component';
 import { InputCellphone } from './input-cellphone/input-cellphone.component';
+import { DOMInsertedEventsModule } from '../dom-inserted-events.module';
 
 
 
@@ -16,7 +17,8 @@ import { InputCellphone } from './input-cellphone/input-cellphone.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DOMInsertedEventsModule
   ],
   exports: [
     InputNumber,

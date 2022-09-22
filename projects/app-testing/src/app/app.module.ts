@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MessageBoxModule } from 'ng-nova';
-import { MessageBoxModule } from 'projects/ng-nova/src/public-api';
+import { DOMInsertedEventsModule, MessageBoxModule } from 'projects/ng-nova/src/public-api';
 import { MatButtonModule } from '@angular/material/button';
 import { InputsComponent } from './inputs/inputs.component';
 import { MatMenuModule } from '@angular/material/menu';
@@ -23,7 +23,8 @@ import { MatContextMenuTrigger } from './contenxt-menu';
     MessageBoxModule,
     MatButtonModule,
     InputsComponent,
-    MatMenuModule
+    MatMenuModule,
+    DOMInsertedEventsModule
   ],
   providers: [
     // MatContextMenuTrigger

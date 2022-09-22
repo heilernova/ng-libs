@@ -2,16 +2,36 @@ import { Component } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 // import { MessageBoxService } from 'ng-nova';
 import { MessageBoxService } from 'projects/ng-nova/src/public-api';
+import { environment } from '../environments/environment';
+import { CompatibleInputEvent, IS_INPUT_SUPPORTED, normalizeInputEvent } from './inputs/test-event/events';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  get type(){
+    return environment.api;
+  }
   constructor(
     private msgbox:MessageBoxService
   ){
-    // loadInputsEvents();
+
+    // document.body.addEventListener("DOMNodeInserted", (e) => {
+    //   let element = e.target;
+    //   if (element instanceof HTMLElement){
+    //     if (element.classList.contains('cdk-overlay-backdrop')){
+
+    //       // // console.log("Evento ");
+    //       // element.addEventListener("contextmenu", (e) => {
+    //       //   e.stopPropagation();
+    //       //   e.preventDefault();
+    //       //   (e.target as HTMLDivElement).click();
+    //       // });
+    //     }
+    //   }
+    // });
   }
 
   onMessageBox(confirm:boolean = false, disableClose?:boolean){

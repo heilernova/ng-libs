@@ -57,6 +57,7 @@ export class InputCurrency implements OnInit {
 
   ngAfterViewInit(): void {
     this.inputNumber.addEventListener('keypress', ($event) => this.onInputNumberKeypress($event));
+    this.inputNumber.addEventListener('keyup', e => this.onInputNumberKeyup(e));
     this.inputDecimals.addEventListener('keypress', ($event) => this.onInputDecimalKeypress($event));
 
     this.inputNumber.addEventListener('keyup', ($event) => {
@@ -69,6 +70,8 @@ export class InputCurrency implements OnInit {
         ($event.target as HTMLInputElement).selectionStart == input.value.length;
       }
     });
+
+    this.inputNumber.addEventListener("keyup", e => {})
 
     this.inputDecimals.addEventListener('keyup', ($event) => {
       if ($event.key == 'Backspace' && ($event.target as HTMLInputElement).value == ''){
@@ -104,6 +107,15 @@ export class InputCurrency implements OnInit {
     }
 
     if (e.key == '.' || e.key == ','){
+      e.preventDefault();
+      this._focusMonitor.focusVia(this.inputDecimals, 'program');
+    }
+  }
+
+  onInputNumberKeyup(e:KeyboardEvent): void {
+    let text = (e.target as HTMLInputElement).value;
+    if (text.match(/[\., \,]$/g)){
+      (e.target as HTMLInputElement).value = text.substring(0, text.length - 1);
       e.preventDefault();
       this._focusMonitor.focusVia(this.inputDecimals, 'program');
     }
